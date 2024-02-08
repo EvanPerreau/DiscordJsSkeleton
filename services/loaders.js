@@ -63,6 +63,7 @@ async function loadCommands(client, commandsFolderPath) {
 
 async function loadEvents(client, eventsFolderPath) {
     const eventFilesPath = await getJsFiles(eventsFolderPath);
+    console.log(`Starting load a total of ${eventFilesPath.size} events.`);
     await Promise.all([...eventFilesPath].map(async (filePath) => {
         if (require.cache[filePath]) {
             delete require.cache[filePath];
@@ -75,6 +76,7 @@ async function loadEvents(client, eventsFolderPath) {
             client.on(event.name, (...args) => event.execute(...args));
         }
     }));
+    console.log(`Finished loading ${eventFilesPath.size} events.`);
 }
 
 module.exports = {
