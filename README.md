@@ -30,6 +30,7 @@ You need to complete the `config.json` file with your identifier
 
 You can find **bot id** in the *General Information* section on an application in Discord developer portal.
 ![image](https://github.com/EvanPerreau/DiscordJsSkeleton/assets/114474918/5d50ee43-cd0b-4197-9cb8-92b01c8c932e)
+
 And **token** in the *Bot* section.
 ![image](https://github.com/EvanPerreau/DiscordJsSkeleton/assets/114474918/f9a6ec27-e30c-46a1-accb-e2aa7e0e1ee7)
 
