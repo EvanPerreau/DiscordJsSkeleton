@@ -8,7 +8,14 @@ if (token === undefined || token === "your token" || clientId === undefined || c
     process.exit(1);
 }
 
-const client = new Client({ intents:  [GatewayIntentBits.Guilds]});
+const client = new Client({
+    intents: [
+        GatewayIntentBits.Guilds,
+        GatewayIntentBits.GuildMessages,
+        GatewayIntentBits.MessageContent,
+        GatewayIntentBits.GuildMembers
+    ]
+});
 
 const commandsFolderPath = path.join(__dirname, 'commands');
 const eventsFolderPath = path.join(__dirname, 'events');
